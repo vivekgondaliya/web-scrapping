@@ -8,7 +8,8 @@ coverpage = url.content
 soup = BeautifulSoup(coverpage, 'html5lib')
 articles = soup.find_all('item')
 
-print(articles[0].find('title'))
+print(articles[0].find('title').get_text(strip=True))
+print(articles[1].find('title').get_text(strip=True))
 
 
 #load the data into bs4
